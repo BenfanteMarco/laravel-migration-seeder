@@ -15,6 +15,29 @@
     </head>
 
     <body>
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-striped mt-5">
+                        <tbody>
+                            @foreach ($trains as $train)
+                                <tr>
+                                    <td>{{ $train->id }}</td>
+                                    <td>{{ $train->azienda }}</td>
+                                    <td>{{ $train->stazione_di_partenza }}</td>
+                                    <td>{{ $train->stazione_di_arrivo }}</td>
+                                    <td>{{ $train->orario_partenza }}</td>
+                                    <td>{{ $train->orario_arrivo }}</td>
+                                    <td>{{ $train->codice_treno }}</td>
+                                    <td>{{ $train->numero_carrozze }}</td>
+                                    <td>{{ $train->in_orario ? 'Si' : 'No' }}</td>
+                                    <td>{{ $train->cancellato ? 'Si' : 'No' }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
